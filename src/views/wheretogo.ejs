@@ -144,18 +144,19 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col">
                         <div class="popular_content d-flex flex-md-row flex-column flex-wrap align-items-md-center align-items-start justify-content-md-between justify-content-start">
-                            <% for(i=0;i<Hill.length();i++)%>
+                            <% for(i=0;i<Hill.length;i++) {%>
                                 <!-- Popular Item -->
                                 <div class="popular_item">
                                     <a href="offers.html">
-                                        <img src=< %=Hill[i].img %> alt="image by Egzon Bytyqi">
+                                        <img src=<%=JSON.stringify(Hill[i].img)%> alt="image by Egzon Bytyqi">
                                         <div class="popular_item_content">
 
                                             <div class="popular_item_title">
-                                                <%=Hill[i].name%>
+                                                <%=JSON.stringify(Hill[i].name)%>
                                             </div>
                                         </div>
                                     </a>
@@ -164,6 +165,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 

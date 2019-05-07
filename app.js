@@ -49,6 +49,6 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 
-app.listen(3029, (req, res) => {
-    console.log('listening to port' + chalk.blue('3029'));
+app.listen(3030, (req, res) => {
+    console.log('listening to port' + chalk.blue('3030'));
 });

@@ -51,12 +51,22 @@ wheresRouter.route('/:id')
                 typ = "monuments"
                 break;
         }
-        where.find({
-            "advtype": typ
-        })((err, Hill) => {
+        where.find({ "advtype": typ }, (err, Hill) => {
             assert.equal(err, null);
             res.render('wheretogo.ejs', { Hill })
             console.log(Hill)
         })
+
+        // where.find({ "advtype": typ }).then((err, Hill) => {
+        //     if (err)
+        //         console.log(handleError(err));
+
+        //     res.render('wheretogo.ejs', { Hill });
+        // });
+        // where.find({}).toArray(function(err, Hill) {
+        //     assert.equal(err, null);
+        //     console.log("Found the following records");
+        //     res.render('wheretogo.ejs', { wheretogo1: Hill });
+        // })
     })
 module.exports = wheresRouter;
