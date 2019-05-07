@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Offers</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Destino project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesh/bootstrap4/bootstrap.min.css">
+    <link href="pluginsh/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/stylesh/offers_styles.css">
+    <link rel="stylesheet" type="text/css" href="/stylesh/offers_responsive.css">
+</head>
+
+<body>
+
+    <div class="super_container">
+
+        <!-- Header -->
+
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="header_container d-flex flex-row align-items-center justify-content-start">
+
+                            <!-- Logo -->
+                            <div class="logo_container">
+                                <div class="logo">
+                                    <div>Trip Kerala</div>
+                                    <div>travel website</div>
+                                    <div class="logo_image"><img src="imagesh/logo.png" alt=""></div>
+                                </div>
+                            </div>
+
+                            <!-- Main Navigation -->
+                            <nav class="main_nav ml-auto">
+                                <ul class="main_nav_list">
+                                    <li class="main_nav_item active"><a href="/index">Home</a></li>
+                                    <li class="main_nav_item"><a href="/offers">Where to go</a></li>
+
+                                </ul>
+                            </nav>
+
+                            <!-- Search -->
+                            <div class="search">
+                                <form action="#" class="search_form">
+                                    <input type="search" name="search_input" class="search_input ctrl_class" required="required" placeholder="Keyword">
+                                    <button type="submit" class="search_button ml-auto ctrl_class"><img src="imagesh/search.png" alt=""></button>
+                                </form>
+                            </div>
+
+                            <!-- Hamburger -->
+                            <div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Menu -->
+
+        <div class="menu_container menu_mm">
+
+            <!-- Menu Close Button -->
+            <div class="menu_close_container">
+                <div class="menu_close"></div>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu_inner menu_mm">
+                <div class="menu menu_mm">
+                    <div class="menu_search_form_container">
+                        <form action="#" id="menu_search_form">
+                            <input type="search" class="menu_search_input menu_mm">
+                            <button id="menu_search_submit" class="menu_search_submit" type="submit"><img src="imagesh/search_2.png" alt=""></button>
+                        </form>
+                    </div>
+                    <ul class="menu_list menu_mm">
+
+
+                        <li class="main_nav_item active"><a href="/index">Home</a></li>
+
+                        <li class="main_nav_item"><a href="/offers">Where to go</a></li>
+
+
+                    </ul>
+
+                    <!-- Menu Social -->
+
+                    <div class="menu_social_container menu_mm">
+                        <ul class="menu_social menu_mm">
+                            <li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Home -->
+
+        <div class="home">
+            <!-- Image by https://unsplash.com/@peecho -->
+            <div class="home_background parallax-window" data-parallax="scroll" data-image-src="imagesh/abttheme.jpg" data-speed="0.8"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="home_content">
+                            <div class="home_content_inner">
+                                <div class="home_title">
+                                    Where To Go
+                                </div>
+                                <div class="home_breadcrumbs">
+                                    <ul class="home_breadcrumbs_list">
+                                        <li class="home_breadcrumb"><a href="/index">Home</a></li>
+                                        <li class="home_breadcrumb">
+                                            Where To Go
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Find Form -->
+
+        <div class="find">
+            <!-- Image by https://unsplash.com/@garciasaldana_ -->
+            <div class="find_background_container prlx_parent">
+                <div class="find_background prlx" style="background-color: rgb(36, 87, 55)"></div>
+            </div>
+            <!-- <div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div> -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="find_title text-center">Find the Adventure of a lifetime</div>
+                    </div>
+                    <div class="col-12">
+                        <div class="find_form_container">
+                            <form action="#" id="find_form" class="find_form d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-between justify-content-start flex-wrap">
+                                <div class="find_item">
+                                    <div>Destination:</div>
+                                    <input type="text" class="destination find_input" required="required" placeholder="Keyword here">
+                                </div>
+                                <div class="find_item">
+                                    <div>Adventure type:</div>
+                                    <select name="adventure" id="adventure" class="dropdown_item_select find_input">
+									<option>Categories</option>
+									<option>Categories</option>
+									<option>Categories</option>
+								</select>
+                                </div>
+
+
+                                <button class="button find_button">Find</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offers -->
+
+        <div class="offers">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="section_title text-center">
+                            <h2>Top destinations in Kerela</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="items item_grid clearfix">
+
+                            <!-- Item -->
+
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wbackwater2.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Backwater</div>
+
+
+                                    <div class="item_text">The scenic backwaters of Kerala comprise serene stretches of lakes, canals and lagoons located parallel to the coast of the Arabian Sea. The backwater regions of Kerala are one of the most popular tourist destinations
+                                        in the world. The tranquil backwater cruises are a once in a lifetime experience. Alappuzha, known as the 'Venice of the East', is especially popular for its houseboat cruises where you can soak in nature at its
+                                        finest form.</div>
+                                    <div class="item_more_link"><a href="/offers/<%=0%>">Read More</a></div>
+                                </div>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="item clearfix rating_3">
+                                <div class="item_image"><img src="imagesh/wbeach.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Beaches</div>
+
+                                    <div class="item_text">Kerala is home to a number of spectacular beaches that will take your breath away. As Kerala is a coastal state, some of the most popular tourist destinations in Kerala are beaches like Kovalam, Varkala, Chowara, Chavakkad,
+                                        Nattika, Cherai, Kizhunna, Poovar and the list goes on and on. The Kerala coast is replete with exotic resorts and hotels where travellers can spend their time sunbathing, swimming or simply enjoying the stunning
+                                        view.
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=1%>">Read More</a></div>
+                                </div>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="item clearfix rating_4">
+                                <div class="item_image"><img src="imagesh/whills.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Hills</div>
+
+                                    <div class="item_text">Kerala brings to you a magical tryst with nature through its various hills and hill stations. A majority of these places in Kerala are situated on the windward side of the majestic Western Ghats. Enjoy the long chain
+                                        of lush mist-clad hill stations of Kerala and explore the various plantations, wildlife, flora and fauna that comprise an integral part of this experience.</div>
+                                    <div class="item_more_link"><a href="/offers/<%=3%>">Read More</a></div>
+                                </div>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wwild.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">wildlife</div>
+
+                                    <div class="item_text">There are a number of popular wildlife sanctuaries in Kerala housing exotic and rare species of flora and fauna. Nestled in the elaborate forest of the majestic Western Ghats or Sahyadri Ranges in Kerala are fourteen
+                                        wildlife sanctuaries and two tiger reserves. Kerala also has six national parks containing protected and endangered species like the Indian Sloth-Bear, Lion-Tailed Macaque, Indian Bison, Bengal Tiger, Nilgiri Tahr
+                                        etc.
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=4%>">Read More</a></div>
+                                </div>
+                            </div>
+
+
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wfort.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Forts</div>
+
+                                    <div class="item_text">Kerala has had a long line of rulers and armies that have shaped the culture and architecture of the State over centuries. Many of the prominent forts and palaces still exist to this day as a reminder of a bygone era.
+                                        Listed below are all the historical forts and palaces that warrant a visit.
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=5%>">Read More</a></div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wwaterfall.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Waterfall</div>
+
+                                    <div class="item_text">Kerala is popular for having numerous majestic waterfalls. These scintillating cascades are famous picnic spots and excursion destinations round the year. The luscious Kerala waterfalls are a sight your eyes will never
+                                        tire of feasting upon.
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=6%>">Read More</a></div>
+                                </div>
+                            </div>
+
+
+                            <!---->
+
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wmuseum.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Museum</div>
+
+                                    <div class="item_text">Museums are storehouses of not just our history but also a treasure trove of information regarding the various events and mechanisms that led us to this point in time. They have with them teachings, information and
+                                        even warnings at times which are of great significance to the future generations. We can learn and observe from those who carved out a place in history. The relics contained inside museums stand testament to the
+                                        progress we have made over the ages and the direction we're heading in. Our museums have been well-maintained and equipped with certified guides to ensure a seamless and scholarly experience at every single one
+                                        of them. From Heritage Museums, to Art Museums to niche Museums that catalogue a specific topic, we have safeguarded these testimonials with the best possible efforts and resources. You will find linked the pages
+                                        that provide information on some of the best museums open to the public in Kerala.
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=7%>">Read More</a></div>
+                                </div>
+                            </div>
+
+
+                            <!---->
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wpilgrim.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Pilgrim Centers</div>
+
+                                    <div class="item_text">Kerala is known to be amongst the rare places where all major religions have coexisted peacefully for centuries. Each have left their own mark on the culture of the state. You can witness the same by visiting the various
+                                        religious institutions spread across the state. From Hindu temples, churches and mosques to Jain temples, synagogues and Buddhist monasteries, there are various centers of pilgrimage for our visitors. Do try adding
+                                        them to your itinerary because they are amongst the most spiritually calming places in the world
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=8%>">Read More</a></div>
+                                </div>
+                            </div>
+
+                            <!---->
+
+
+                            <!---->
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wplace.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Place Of Interest</div>
+
+                                    <div class="item_text">Our rich history is a source of pride for every Keralite. The cultural and artistic lessons that have been passed down are of utmost importance to us. It is our heritage and hence across the state we have centers built
+                                        to honor and preserve these traditions. From the Stone Age carvings of Edakkal caves to Kalamandalam, a University for performing arts, the teachings of our elders still thrive in modern day Kerala. Their gifts
+                                        to us shall never be forgotten and each new generation adds its own input to the same. Come visit these locations for an insight into the legacy of the state.
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=9%>">Read More</a></div>
+                                </div>
+                            </div>
+
+
+
+
+                            <!---->
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wpicnic.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Picnic</div>
+
+                                    <div class="item_text">Picnic spots adorn the landscape of our great state. Travellers can find a temporary abode in many natural locations across the length and breadth of Kerala. Picnickers tend to have trouble picking a spot! From dams
+                                        and waterfalls to forests and natural reserves, Kerala is filled with places awaiting you. Grab your lunch basket and let's be on our way!
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=10%>">Read More</a></div>
+                                </div>
+                            </div>
+
+                            <!---->
+
+
+                            <!---->
+                            <div class="item clearfix rating_5">
+                                <div class="item_image"><img src="imagesh/wmonuments.jpg" alt=""></div>
+                                <div class="item_content">
+
+                                    <div class="item_title">Monuments</div>
+
+                                    <div class="item_text">Kerala monuments are relics of a past that the state is extremely proud of. These indicate some of the finest gifts left for us by the ancestors. They are storehouses of information and contain stories regarding the
+                                        glorious history of Kerala. They stand as proud testaments of our architectural prowess. The monuments listed below are wonderful examples of Kerala's heritage, and the wisdom and technical knowledge that our forefathers
+                                        possessed.
+                                    </div>
+                                    <div class="item_more_link"><a href="/offers/<%=11%>">Read More</a></div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+
+
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Footer Column -->
+                    <div class="col-lg-4 footer_col">
+                        <div class="footer_about">
+                            <!-- Logo -->
+                            <div class="logo_container">
+                                <div class="logo">
+                                    <div>Trip Kerala</div>
+                                    <div>travel website</div>
+                                    <div class="logo_image"><img src="imagesh/logo.png" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="footer_about_text">A tropical paradise where you can paddle in tranquil backwaters, trek the rocky Western Ghats, chase the mists in the hill stations, rejuvenate with pristine Nature and Ayurvedic treatments, hug the unspoiled beaches and so
+                                much more. Kerala isn’t just a destination; it’s a saga of experiences!. contact:8899776644
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Column -->
+
+
+                    <!-- Footer Column -->
+
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="jsh/jquery-3.2.1.min.js"></script>
+    <script src="stylesh/bootstrap4/popper.js"></script>
+    <script src="stylesh/bootstrap4/bootstrap.min.js"></script>
+    <script src="pluginsh/greensock/TweenMax.min.js"></script>
+    <script src="pluginsh/greensock/TimelineMax.min.js"></script>
+    <script src="pluginsh/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="pluginsh/greensock/animation.gsap.min.js"></script>
+    <script src="pluginsh/greensock/ScrollToPlugin.min.js"></script>
+    <script src="pluginsh/Isotope/isotope.pkgd.min.js"></script>
+    <script src="pluginsh/easing/easing.js"></script>
+    <script src="pluginsh/parallax-js-master/parallax.min.js"></script>
+    <script src="/jsh/offers_custom.js"></script>
+</body>
+
+</html>
