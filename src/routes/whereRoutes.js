@@ -1,10 +1,13 @@
 const express = require('express');
 
 const wheresRouter = express.Router();
-const where = require('../model/wheretogo1');
-var typ = "";
+const mongoose = require('mongoose');
+const WhereToGo = require('../model/wheretogo1');
+var typ;
 const assert = require('assert');
 const ejsLint = require('ejs-lint');
+
+
 wheresRouter.route('/')
     .get((req, res) => {
         res.render('offers')
@@ -13,7 +16,7 @@ wheresRouter.route('/')
 
 wheresRouter.route('/:id')
     .get((req, res) => {
-        console.log("ROUTE")
+
         const id = req.params.id;
 
         switch (id) {
@@ -51,10 +54,17 @@ wheresRouter.route('/:id')
                 typ = "monuments"
                 break;
         }
-        where.find({ "advtype": typ }, (err, Hill) => {
-            assert.equal(err, null);
-            res.render('wheretogo.ejs', { Hill })
-            console.log(Hill)
+        console.log(typ);
+        var query = { "advtype": typ }
+        WhereToGo.find(query, 'advtype name img', function(err, WhereToGo) {
+            // assert.equal(err, null);
+            if (err) throw err;
+            console.log("popcorn");
+            console.log(WhereToGo.length);
+            console.log('%s %s is a %s.', WhereToGo.advtype, WhereToGo.name,
+                WhereToGo.img);
+            res.render('wheretogo.ejs', { WhereToGo })
+
         })
 
         // where.find({ "advtype": typ }).then((err, Hill) => {
@@ -67,6 +77,14 @@ wheresRouter.route('/:id')
         //     assert.equal(err, null);
         //     console.log("Found the following records");
         //     res.render('wheretogo.ejs', { wheretogo1: Hill });
+        // })
+
+
+
+        // where.find().toArray((err, Hill) => {
+        //     assery.equal(err, null);
+        //     console.log(Hill);
+        //     res.sendfile('wheretogo.ejs', { Hill });
         // })
     })
 module.exports = wheresRouter;

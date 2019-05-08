@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const whereschema = new Schema({
+const whereschema = new mongoose.Schema({
     advtype: String,
     name: String,
     district: String,
@@ -8,4 +8,4 @@ const whereschema = new Schema({
     img: String
 })
 
-module.exports = mongoose.model('where', whereschema);
+module.exports = mongoose.model('WhereToGo', whereschema);

@@ -2,7 +2,7 @@ const express = require('express');
 
 const homesRouter = express.Router();
 
-const where = require('../model/wheretogo1');
+const WhereToGo = require('../model/wheretogo1');
 const ejsLint = require('ejs-lint');
 homesRouter.route('/')
     .get((req, res) => {
