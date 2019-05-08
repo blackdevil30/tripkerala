@@ -4,9 +4,9 @@ const placeRouter = express.Router();
 
 const WhereToGo = require('../model/wheretogo1');
 
-placeRouter.route('/')
+placeRouter.route('/addplace')
     .get((req, res) => {
-        res.render('addplace.ejs');
+        res.render("addplace.ejs");
     });
 
 module.exports = placeRouter;

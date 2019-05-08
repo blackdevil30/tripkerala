@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const loginRouter = require("./src/routes/loginRoutes");
 const homesRouter = require('./src/routes/homeRoutes');
 const wheresRouter = require('./src/routes/whereRoutes');
-const placeRouter = require("./src/routes/addplace");
+const placeRouter = require("./src/routes/addplaceRoutes");
 
 app.use('/loginadmin', loginRouter);
 app.use('/index', homesRouter);
@@ -40,6 +40,11 @@ app.get('/login', (req, res) => {
 });
 
 
+loginRouter.route('/addplace')
+    .get((res, req) => {
+        res.render("addplace.ejs")
+    })
+
 
 
 
@@ -48,6 +53,6 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 
-app.listen(3031, (req, res) => {
-    console.log('listening to port' + chalk.blue('3031'))
+app.listen(3032, (req, res) => {
+    console.log('listening to port' + chalk.blue('3032'))
 });
