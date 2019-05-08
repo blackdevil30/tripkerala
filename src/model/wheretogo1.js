@@ -7,5 +7,5 @@ const whereschema = new mongoose.Schema({
     description: String,
     img: String
 })
-
-module.exports = mongoose.model('WhereToGo', whereschema);
+var WhereToGo = mongoose.model('WhereToGo', whereschema);
+module.exports = WhereToGo;

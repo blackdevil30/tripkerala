@@ -1,29 +1,23 @@
 const express = require('express');
 
 const loginRouter = express.Router();
+// const bodyParser = require('body-parser');
+// loginRouter.use(bodyParser.urlencoded({ extended: true }));
 
-function router() {
-    loginRouter.route('/')
-        .get((res, req) => {
-            var user = req.param('UserName').toString();
-            var pwd = req.param('pwd').toString();
-            if ((user == "njay") && (pwd == "njay")) {
-                res.redirect('index')
-            } else {
+loginRouter.route('/')
+    .post((req, res) => {
+        // console.log(req.body);
+        var user = req.body.UserName;
+        var passwd = req.body.pwd;
+        console.log(user);
+        console.log(passwd);
 
-                res.render('/');
-            }
-        });
-    loginRouter.route('/id')
-        .get((req, res) => {
-            res.render('signup');
-            loginRouter.route('/')
-                .get((req, res) => {
-                    res.redirect('login');
-                })
+        if ((user == "admin") && (passwd == "admin")) {
+            res.redirect('/addplace')
+        } else {
+            res.redirect('/login');
+        }
+    });
 
-        })
 
-    return loginRouter;
-}
-module.exports = router;
+module.exports = loginRouter;

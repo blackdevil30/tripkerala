@@ -20,27 +20,26 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const loginRouter = require("./src/routes/loginRoutes")();
+const loginRouter = require("./src/routes/loginRoutes");
 const homesRouter = require('./src/routes/homeRoutes');
 const wheresRouter = require('./src/routes/whereRoutes');
+const placeRouter = require("./src/routes/addplace");
 
-
-app.use('/login', loginRouter);
+app.use('/loginadmin', loginRouter);
 app.use('/index', homesRouter);
 app.use('/offers', wheresRouter);
+app.use('/addplace', placeRouter);
+
 app.get('/', (req, res) => {
     res.render('index')
 });
 
-// app.get('/', (req, res) => {
-//     res.render('login', {
 
-//         err: ""
-//     });
-// });
-app.get('/offers', (req, res) => {
-    res.render('offers')
+app.get('/login', (req, res) => {
+    res.render('login');
 });
+
+
 
 
 
@@ -49,6 +48,6 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 
-app.listen(3030, (req, res) => {
-    console.log('listening to port' + chalk.blue('3030'));
+app.listen(3031, (req, res) => {
+    console.log('listening to port' + chalk.blue('3031'))
 });

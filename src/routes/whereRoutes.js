@@ -3,7 +3,7 @@ const express = require('express');
 const wheresRouter = express.Router();
 const mongoose = require('mongoose');
 const WhereToGo = require('../model/wheretogo1');
-var typ;
+var advtype;
 const assert = require('assert');
 const ejsLint = require('ejs-lint');
 
@@ -18,54 +18,56 @@ wheresRouter.route('/:id')
     .get((req, res) => {
 
         const id = req.params.id;
-
+        console.log(id);
+        var advtype = " ";
         switch (id) {
             case 0:
-                typ = "backwater"
+                advtype = "backwater"
+
                 break;
             case 1:
-                typ = "beaches"
+                advtype = "beaches"
                 break;
             case 2:
-                typ = "hills"
+                advtype = "hills"
                 break;
             case 3:
-                typ = "wildlife"
+                advtype = "wildlife"
                 break;
             case 4:
-                typ = "fort"
+                advtype = "fort"
                 break;
             case 5:
-                typ = "waterfall"
+                advtype = "waterfall"
                 break;
             case 6:
-                typ = "museum"
+                advtype = "museum"
                 break;
             case 7:
-                typ = "pilgrimcenter"
+                advtype = "pilgrimcenter"
                 break;
             case 8:
-                typ = "placeofinterest"
+                advtype = "placeofinterest"
                 break;
             case 9:
-                typ = "picnic"
+                advtyp = "picnic"
                 break;
             case 10:
-                typ = "monuments"
+                advtype = "monuments"
                 break;
         }
-        console.log(typ);
-        var query = { "advtype": typ }
-        WhereToGo.find(query, 'advtype name img', function(err, WhereToGo) {
-            // assert.equal(err, null);
-            if (err) throw err;
-            console.log("popcorn");
-            console.log(WhereToGo.length);
-            console.log('%s %s is a %s.', WhereToGo.advtype, WhereToGo.name,
-                WhereToGo.img);
-            res.render('wheretogo.ejs', { WhereToGo })
+        console.log(advtype);
+        // var query = { "advtype": typ }
+        // WhereToGo.find(query, 'advtype name img', function(err, WhereToGo) {
+        //     // assert.equal(err, null);
+        //     if (err) throw err;
+        //     console.log("popcorn");
+        //     console.log(WhereToGo.length);
+        //     console.log('%s %s is a %s.', WhereToGo.advtype, WhereToGo.name,
+        //         WhereToGo.img);
+        //     res.render('wheretogo.ejs', { WhereToGo })
 
-        })
+        // })
 
         // where.find({ "advtype": typ }).then((err, Hill) => {
         //     if (err)
@@ -81,10 +83,11 @@ wheresRouter.route('/:id')
 
 
 
-        // where.find().toArray((err, Hill) => {
-        //     assery.equal(err, null);
-        //     console.log(Hill);
-        //     res.sendfile('wheretogo.ejs', { Hill });
-        // })
+        WhereToGo.find({}).then(function
+
+            (WhereToGo) {
+
+                res.render('wheretogo.ejs', { WhereToGo });
+            })
     })
 module.exports = wheresRouter;
