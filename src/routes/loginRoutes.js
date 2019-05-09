@@ -20,8 +20,4 @@ loginRouter.route('/')
 
     });
 
-loginRouter.route('/addplace')
-    .get((res, req) => {
-        res.render("addplace.ejs")
-    })
 module.exports = loginRouter;

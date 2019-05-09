@@ -28,7 +28,7 @@ const placeRouter = require("./src/routes/addplaceRoutes");
 app.use('/loginadmin', loginRouter);
 app.use('/index', homesRouter);
 app.use('/offers', wheresRouter);
-app.use('/addplace', placeRouter);
+app.use('/addplace', placeRouter)();
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -40,10 +40,9 @@ app.get('/login', (req, res) => {
 });
 
 
-loginRouter.route('/addplace')
-    .get((res, req) => {
-        res.render("addplace.ejs")
-    })
+app.get('/addplace', (req, res) => {
+    res.render('addplace.ejs')
+})
 
 
 
