@@ -28,7 +28,9 @@ const placeRouter = require("./src/routes/addplaceRoutes");
 app.use('/loginadmin', loginRouter);
 app.use('/index', homesRouter);
 app.use('/offers', wheresRouter);
-app.use('/addplace', placeRouter)();
+app.use('/addplacenw', placeRouter);
+
+
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -42,6 +44,7 @@ app.get('/login', (req, res) => {
 
 app.get('/addplace', (req, res) => {
     res.render('addplace.ejs')
+
 })
 
 
@@ -52,6 +55,6 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 
-app.listen(3032, (req, res) => {
-    console.log('listening to port' + chalk.blue('3032'))
+app.listen(3033, (req, res) => {
+    console.log('listening to port' + chalk.blue('3033'))
 });

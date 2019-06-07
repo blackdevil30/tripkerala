@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 const WhereToGo = require('../model/wheretogo1');
 
-// const methodOverride = require('method-override');
+
 const multer = require('multer');
 const fs = require('fs');
 
@@ -40,38 +40,27 @@ const upload = multer({
 
 function router() {
     placeRouter.route('/addplace')
-        .post(upload, (req, res, (err) => {
-            if (err) {
-                res.render('addplace', {
-                    msg: err
+        .post(upload, (res, req) => {
+            var stringer = "/placeimages/" + req.file.filename;
 
-                })
-            } else {
-
-                console.log(req.file);
-
-                var stringer = "placeimages/"
-                WhereToGo.create({
-                    advtype: req.body.advtyp,
-                    place: req.body.plc,
-                    district: req.body.dist,
-                    description: req.body.descript,
-                    Img: stringer + req.file.path.replace('N:\miniproject\public\placeimages\\', '')
-                }, (err, WhereToGo) => {
-                    if (err)
-                        console.log(handleError(err));
-                    WhereToGo.find((err, WhereToGo) => {
-                        if (err) {
-                            console.log(handleError(err));
-                            res.render('addplace.ejs');
-                        } else {
-                            res.render('wheretogo', { WhereToGo })
-                        }
-                    });
-                });
+            var item = {
+                advtype: req.body.advtyp,
+                place: req.body.plc,
+                district: req.body.dist,
+                description: req.body.descript,
+                Img: stringer + req.file.path.replace('N:\\miniproject\\public\\placeimages\\', '')
             }
-            res.redirect('/addplace')
-        }));
+            var where = new WhereToGo(item);
+            where.save;
+
+            res.redirect('/offers');
+        })
+
+
+
+
+
+
     return placeRouter;
 }
 module.exports = router;
